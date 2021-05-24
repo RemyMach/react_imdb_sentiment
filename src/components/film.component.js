@@ -17,7 +17,7 @@ function Film() {
     return (
         <React.Fragment>
             <p>Films</p>
-            <input className="search-input" value={cityName} onChange={(e) => {setCityName(e.target.value)}} placeholder="Rechercher un film"/>
+            <input className="search-input" value={filmName} onChange={(e) => {setFilmName(e.target.value)}} placeholder="Rechercher un film"/>
         </React.Fragment>
     );
 
