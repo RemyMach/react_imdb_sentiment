@@ -11,19 +11,15 @@
     margin: 2%;
 }
 
-#film-details-info .film-details-summary-note {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-#film-details-info span p{
+#film-details-info #film-details-summary p{
     width: 100%;
 }
 
-#film-details-summary-note span p {
-    padding-left: 4%;
+#film-detail-vote {
+    position: relative;
+    top: 0;
+    right: 0;
 }
 
 #film-details-image {
@@ -32,5 +28,35 @@
 img {
     max-width:100%;
     max-height:100%;
+}
+
+#review-button {
+    padding: 0 16px;
+    line-height: 36px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: large;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 ), 0px 2px 2px 0px rgb(0 0 0 ), 0px 1px 5px 0px rgb(0 0 0);
+}
+
+#review-button:hover {
+    color: cornflowerblue;
+    background-color: white;
+}
+
+.star {
+    filter: invert(98%) sepia(62%) saturate(5592%) hue-rotate(2deg) brightness(105%) contrast(102%);
+}
+#film-detail-rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 

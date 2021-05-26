@@ -20,7 +20,6 @@ function FilmReview({ film }) {
 
     return (
         <span>
-            <p>Critique</p>
             <p>{reviewsFilm}</p>
         </span>
     );
