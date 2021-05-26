@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './components/Home.component'
-import Film from './components/film.component'
+import FilmSearch from './components/FilmSearch.component'
 
 function App() {
     const [currentPage, setCurrentPage] = useState();
@@ -11,7 +11,7 @@ function App() {
             if (window.location.pathname === '/') {
                 setCurrentPage(<Home />);
             } else if (window.location.pathname === '/films') {
-                setCurrentPage(<Film />);
+                setCurrentPage(<FilmSearch />);
             }
         }
 
@@ -20,9 +20,7 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                {currentPage}
-            </header>
+            {currentPage}
         </div>
     );
 }

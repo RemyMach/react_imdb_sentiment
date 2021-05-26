@@ -1,0 +1,23 @@
+#content-film-search {
+    display: flex;
+    width: 80%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#content-film-search input {
+    width: 100%;
+}
+
+#content-film-search input {
+    border: none;
+    width: 60%;
+    margin: 0 10%;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
