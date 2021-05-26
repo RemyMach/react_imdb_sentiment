@@ -48,7 +48,9 @@ function FilmSearch() {
                 <p>Quel film recherchez-vous?</p>
                 <input className="search-input" value={filmName} onChange={(e) => {setFilmName(e.target.value)}} placeholder="Rechercher un film"/>
             </span>
-            {films.length !== 0 ? films.map( film => <FilmDetails films={film} />) : ''}
+            <span id="film-details-display">
+                {films.length !== 0 ? films.map( film => <FilmDetails films={film} />) : ''}
+            </span>
         </React.Fragment>
     );
 

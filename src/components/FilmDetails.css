@@ -1,15 +1,9 @@
-#film-details-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #film-details-info {
     color: white;
     width: 30%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 0.6em;
     border: 2px solid white;
     border-radius: 4px;
@@ -26,6 +20,9 @@
 
 #film-details-info span p{
     width: 100%;
+}
+
+#film-details-summary-note span p {
     padding-left: 4%;
 }
 

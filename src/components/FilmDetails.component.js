@@ -1,6 +1,7 @@
 import {Film} from "../models/film.model";
 import './FilmDetails.css';
 import {useEffect, useState} from "react";
+import {FilmReview} from "./FilmReview.component";
 
 function FilmDetails({ films }) {
     let [imageFilm, setImageFilm] = useState('');
@@ -23,18 +24,19 @@ function FilmDetails({ films }) {
     console.log("voila le film");
     console.log(film)
     return (
-        <div id="film-details-body">
-            <span id="film-details-info">
-                <p>{film.title}</p>
-                <span id="film-details-image">
-                    {imageFilm !== '' ? <img alt={film.title} src={imageFilm} /> : ''}
-                </span>
-                <span className="film-details-summary-note">
-                    <label>Résumé</label><p>{film.overview}</p>
-                </span>
-                <span className="film-details-summary-note">
-                    <label>Note</label><p>{film.voteAverage}/10</p>
-                </span>
+        <div id="film-details-info">
+            <p>{film.title}</p>
+            <span id="film-details-image">
+                {imageFilm !== '' ? <img alt={film.title} src={imageFilm} /> : ''}
+            </span>
+            <span className="film-details-summary-note">
+                <label>Résumé</label><p>{film.overview}</p>
+            </span>s
+            <span className="film-details-summary-note">
+                <label>Note</label><p>{film.voteAverage}/10</p>
+            </span>
+            <span>
+                <FilmReview film={film} />
             </span>
         </div>
     );
