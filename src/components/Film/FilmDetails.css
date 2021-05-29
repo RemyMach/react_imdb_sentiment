@@ -1,6 +1,6 @@
 #film-details-info {
     color: white;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +9,23 @@
     border-radius: 4px;
     padding: 1%;
     margin: 2%;
+}
+
+#film-details-summary-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#film-details-summary-content label {
+    margin-bottom: 5px;
+}
+
+#film-details-summary-content button {
+    margin-top: 5px;
+    width: 100%;
+    vertical-align:top;
 }
 
 
@@ -30,10 +47,29 @@ img {
     max-height:100%;
 }
 
-#review-button {
+#stopWord-button {
     padding: 0 16px;
     line-height: 36px;
-    white-space: nowrap;
+    text-align: center;
+    font-size: large;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 ), 0px 2px 2px 0px rgb(0 0 0 ), 0px 1px 5px 0px rgb(0 0 0);
+}
+
+#stopWord-button:hover {
+    color: cornflowerblue;
+    background-color: white;
+}
+
+#review-button {
+    width: 100%;
+    padding: 0 16px;
+    line-height: 36px;
     text-align: center;
     font-size: large;
     margin: 0;
@@ -58,5 +94,14 @@ img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 400px) {
+
+    #film-details-info {
+        width: 90%
+    }
+
 }
 

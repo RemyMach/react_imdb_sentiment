@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-function FilmReviewSentiment({content}) {
+function TextStopWord({content}) {
     let [sentimentFilm, setSentimentFilm] = useState('');
 
     useEffect( () => {
@@ -15,5 +15,5 @@ function FilmReviewSentiment({content}) {
 }
 
 export {
-    FilmReviewSentiment
+    TextStopWord
 };

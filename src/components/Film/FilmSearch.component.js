@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './FilmSearch.css';
 import FilmDetails from "./FilmDetails.component";
+import Header from "../header/Header.component";
 
 
 
@@ -10,6 +11,16 @@ function FilmSearch() {
 
     const buildFilmArray =  films => {
         return films.map(film => {
+            if(!film.overview) {
+                film.overview = "Pas de résumé pour ce film"
+            }
+            if(!film.original_title) {
+                film.overview = "Pas de titre pour ce film"
+            }
+
+            if(!film.vote_average) {
+                film.vote_average = "Pas de note pour ce film"
+            }
             if(film.id) {
                 return film;
             }
@@ -44,6 +55,7 @@ function FilmSearch() {
 
     return (
         <React.Fragment>
+            <Header />
             <span id="content-film-search">
                 <p>Quel film recherchez-vous?</p>
                 <input className="search-input" value={filmName} onChange={(e) => {setFilmName(e.target.value)}} placeholder="Rechercher un film"/>

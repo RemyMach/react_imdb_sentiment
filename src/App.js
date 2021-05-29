@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './components/Home.component'
-import FilmSearch from './components/FilmSearch.component'
+import FilmSearch from './components/Film/FilmSearch.component'
 
 function App() {
-    const [currentPage, setCurrentPage] = useState();
+    const [activePage, setActivePage] = useState();
 
     useEffect(() => {
         const evaluateLocation = () => {
             if (window.location.pathname === '/') {
-                setCurrentPage(<Home />);
+                setActivePage(<Home />);
             } else if (window.location.pathname === '/films') {
-                setCurrentPage(<FilmSearch />);
+                setActivePage(<FilmSearch />);
             }
         }
 
@@ -20,7 +20,7 @@ function App() {
 
     return (
         <div className="App">
-            {currentPage}
+            {activePage}
         </div>
     );
 }

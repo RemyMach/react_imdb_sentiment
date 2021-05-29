@@ -15,12 +15,12 @@ function Home() {
                 <span className="IMDB-content">
                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
                     <a href="https://www.themoviedb.org/documentation/api" className="api-title" target="_blank">TMDB</a>
-                    <p className="api-desc">l'API IMDB aura pour but de récupérer les informations d'un film recherché. Nom, description, commentaires (si existant), Image</p>
+                    <p className="api-desc">l'API TMDB aura pour but de récupérer les informations d'un film recherché. Nom, description, commentaires (si existant), Image</p>
                 </span>
-                <span className="sentim-content">
+                <span className="exude-content">
                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                    <a href="https://sentim-api.herokuapp.com/" className="api-title" target="_blank">Sentim</a>
-                    <p className="api-desc">API qui va permettre de savoir si la description est surtout les commentiares sont positif ou négatif</p>
+                    <a href="http://uttesh.com/exude-api/" className="api-title" target="_blank">Exude</a>
+                    <p className="api-desc">API qui va permettre de filtrer les stop words du texte, technique très utilisé dans le traitement automatique des langues (catégorisation du sujet principal ...)</p>
                 </span>
             </div>
 
