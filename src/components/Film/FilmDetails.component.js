@@ -62,11 +62,16 @@ function FilmDetails({ films }) {
             <span id="film-details-summary">
                 <span id="film-details-summary-content">
                     <label>Résumé</label>
-                    <button id="stopWord-button" onClick={() => handleStopWordButton()}>{buttonSummaryStopWordMessage}</button>
+                    {
+                        film.overview !== 'Pas de résumé pour ce film' ?
+                            <button id="stopWord-button" onClick={() => handleStopWordButton()}>{buttonSummaryStopWordMessage}</button> :
+                            ''
+                    }
                 </span>
-                {displaySummaryStopWord === true ?
-                    <TextStopWord text={film.overview}/> :
-                    <p>{film.overview}</p>
+                {
+                    displaySummaryStopWord === true ?
+                        <TextStopWord text={film.overview}/> :
+                        <p>{film.overview}</p>
                 }
             </span>
             {film.voteAverage >= 0 && film.voteAverage <= 10 ? <span id="film-detail-rate"><p>{film.voteAverage}/10</p><img className="star" alt="star" src={star}/></span> : <span id="film-detail-rate"><p>{film.voteAverage}</p></span>}

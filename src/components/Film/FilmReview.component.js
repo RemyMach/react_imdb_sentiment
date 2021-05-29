@@ -1,8 +1,12 @@
 import './FilmDetails.css';
 import {useEffect, useState} from "react";
+import './FilmReview.css';
+import {TextStopWord} from "../TextStopWord.component";
 
 function FilmReview({ film }) {
     let [reviewsFilm, setReviewsFilm] = useState('');
+    let [buttonReviewStopWordMessage, setButtonReviewStopWordMessage] = useState("Voir Critique sans stopWords");
+    let [displayReviewStopWord, setDisplayReviewStopWord] = useState(false);
 
     useEffect(() => {
         if(film.id !== '') {
@@ -22,9 +26,30 @@ function FilmReview({ film }) {
 
     }, [film]);
 
+    useEffect(() => {
+        if(displayReviewStopWord === true) {
+            setButtonReviewStopWordMessage("Voir Critique classique");
+        }else {
+            setButtonReviewStopWordMessage("Voir Critique sans stopWords");
+        }
+    }, [displayReviewStopWord])
+
+    const handleStopWordButton = () => {
+        setDisplayReviewStopWord(!displayReviewStopWord);
+    };
+
     return (
         <span>
-            <p>{reviewsFilm}</p>
+            {
+                reviewsFilm !== 'Pas encore de critique pour ce film' ?
+                    <button id="stopWord-review-button" onClick={() => handleStopWordButton()}>{buttonReviewStopWordMessage}</button> :
+                    ''
+            }
+            {
+                displayReviewStopWord === true ?
+                    <TextStopWord text={reviewsFilm} /> :
+                    <p>{reviewsFilm}</p>
+            }
         </span>
     );
 }

@@ -8,15 +8,15 @@ function TextStopWord({text}) {
 
             const requestOptions = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'mode': 'no-cors' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ data:  text})
             };
-
-            fetch('https://exude-api.herokuapp.com/exude/stopping/data', requestOptions)
+            //'https://exude-api.herokuapp.com/exude/stopping/data'
+            fetch('http://localhost:8000/texts', requestOptions)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
-                    setTextFilter(data['data']);
+                    setTextFilter(data['text']);
                 }).catch((e) => {
                 console.log(e);
             });
