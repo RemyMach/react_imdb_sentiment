@@ -65,7 +65,7 @@ function FilmDetails({ films }) {
                     <button id="stopWord-button" onClick={() => handleStopWordButton()}>{buttonSummaryStopWordMessage}</button>
                 </span>
                 {displaySummaryStopWord === true ?
-                    <TextStopWord/> :
+                    <TextStopWord text={film.overview}/> :
                     <p>{film.overview}</p>
                 }
             </span>
