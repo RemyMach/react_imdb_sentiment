@@ -11,8 +11,7 @@ function TextStopWord({text}) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ data:  text})
             };
-            //'https://exude-api.herokuapp.com/exude/stopping/data'
-            fetch('http://localhost:8000/texts', requestOptions)
+            fetch('https://stop-word-api.herokuapp.com/texts', requestOptions)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);

@@ -19,8 +19,9 @@ function Home() {
                 </span>
                 <span className="exude-content">
                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                    <a href="http://uttesh.com/exude-api/" className="api-title" target="_blank">Exude</a>
-                    <p className="api-desc">API qui va permettre de filtrer les stop words du texte, technique très utilisé dans le traitement automatique des langues (catégorisation du sujet principal ...)</p>
+                    <a href="http://uttesh.com/exude-api/" className="api-title" target="_blank">Custom Stop Word</a>
+                    <p className="api-desc">API qui va permettre de filtrer les stop words du texte, technique très utilisé dans le traitement automatique des langues (catégorisation du sujet principal ...)
+                                            Une API que j'ai fait moi-même qui est déployer sur heroku après avoir rencontré des problème de CORS policy avec l'API <a href="http://uttesh.com/exude-api/" className="api-title" target="_blank">Exude</a></p>
                 </span>
             </div>
 
