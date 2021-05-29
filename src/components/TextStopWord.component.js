@@ -8,7 +8,7 @@ function TextStopWord({text}) {
 
             const requestOptions = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.26.8', 'Host': 'exude.herokuapp.com' },
+                headers: { 'Content-Type': 'application/json', 'mode': 'no-cors' },
                 body: JSON.stringify({ data:  text})
             };
 
