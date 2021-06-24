@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 function TextStopWord({text}) {
+    console.log(text)
     let [textFilter, setTextFilter] = useState('');
 
     useEffect( () => {
@@ -14,6 +15,7 @@ function TextStopWord({text}) {
             fetch('https://stop-word-api.herokuapp.com/texts', requestOptions)
                 .then((response) => response.json())
                 .then((data) => {
+                    console.log(text)
                     console.log(data);
                     setTextFilter(data['text']);
                 }).catch((e) => {

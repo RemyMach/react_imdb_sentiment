@@ -1,7 +1,7 @@
 import './FilmDetails.css';
 import {useEffect, useState} from "react";
 import './FilmReview.css';
-import {TextStopWord} from "../TextStopWord.component";
+import {TextStopWord} from "../stopWord/TextStopWord.component";
 
 function FilmReview({ film }) {
     let [reviewsFilm, setReviewsFilm] = useState('');

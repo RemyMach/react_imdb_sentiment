@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import {FilmReview} from "./FilmReview.component";
 import star from '../../assets/star_black.svg';
 import Header from "../header/Header.component";
-import {TextStopWord} from "../TextStopWord.component";
+import {TextStopWord} from "../stopWord/TextStopWord.component";
 
 function FilmDetails({ films }) {
     let [imageFilm, setImageFilm] = useState('');

@@ -32,6 +32,7 @@ function FilmSearch() {
         const option = { signal: abortController.signal };
         const fetchFilms = () => {
             if(filmName !== '') {
+                console.log(filmName)
                 fetch(`https://api.themoviedb.org/3/search/movie?api_key=bde98089c7cef8c708ca1f4350ecba1a&query=${filmName}&page=1`)
                     .then((response) => response.json())
                     .then((data) => {
