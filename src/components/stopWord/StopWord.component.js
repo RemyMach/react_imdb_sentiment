@@ -1,15 +1,21 @@
 import {Film} from "../../models/film.model";
 import './StopWord.css';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../header/Header.component";
 import {TextStopWord} from "./TextStopWord.component";
+import LinkButton from "../route/LinkButton.component";
 
-function StopWord({setPathUrl}) {
+function StopWord({text, setText}) {
     let [stopWordText, setStopWordText] = useState('');
 
-    const onChange = () => {
-        setPathUrl("/details");
-    }
+    useEffect(() => {
+        if(stopWordText !== '') {
+            setText(stopWordText);
+        }
+
+    }, [stopWordText]);
+
+    console.log(text);
     return (
         <React.Fragment>
             <Header />
@@ -23,7 +29,7 @@ function StopWord({setPathUrl}) {
             />
             <h1>Texte sans stopWords</h1>
             {stopWordText !== '' ? <TextStopWord text={stopWordText}/>: ''}
-            <button onClick={() => onChange()}>Essayer le texte à l'envers</button>
+            <LinkButton href="/reverse" className="start-button">Essayer le texte à l'envers</LinkButton>
         </React.Fragment>
     )
 }

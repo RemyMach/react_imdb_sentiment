@@ -8,7 +8,7 @@
     filter: invert(72%) sepia(75%) saturate(4232%) hue-rotate(195deg) brightness(98%) contrast(89%);
 }
 
-#header-content {
+.header-content {
     margin-left: 10%;
     display: flex;
     flex-direction: row;
@@ -16,13 +16,13 @@
     justify-content: flex-start;
 }
 
-#header-content img,p {
+.header-content img,p {
     cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {
 
-    #header_content {
+    .header_content {
         margin-left: 1%;
     }
 
