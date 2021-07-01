@@ -4,10 +4,12 @@ import React, {useState} from "react";
 import Header from "../header/Header.component";
 import {TextStopWord} from "./TextStopWord.component";
 
-function StopWord() {
+function StopWord({setPathUrl}) {
     let [stopWordText, setStopWordText] = useState('');
 
-
+    const onChange = () => {
+        setPathUrl("/details");
+    }
     return (
         <React.Fragment>
             <Header />
@@ -21,6 +23,7 @@ function StopWord() {
             />
             <h1>Texte sans stopWords</h1>
             {stopWordText !== '' ? <TextStopWord text={stopWordText}/>: ''}
+            <button onClick={() => onChange()}>Essayer le texte à l'envers</button>
         </React.Fragment>
     )
 }

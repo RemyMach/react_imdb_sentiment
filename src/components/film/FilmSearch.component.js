@@ -9,6 +9,7 @@ function FilmSearch() {
     let [films, setFilms] = useState([]);
     let [filmName, setFilmName] = useState('');
 
+
     const buildFilmArray =  films => {
         return films.map(film => {
             if(!film.overview) {
