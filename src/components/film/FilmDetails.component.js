@@ -18,10 +18,10 @@ function FilmDetails({ films }) {
             fetch(`http://api.themoviedb.org/3/movie/${films.id}/images?api_key=bde98089c7cef8c708ca1f4350ecba1a`)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data['backdrops'][0]['file_path'])
+                    //console.log(data['backdrops'][0]['file_path'])
                     setImageFilm('https://image.tmdb.org/t/p/w500/' + data['backdrops'][0]['file_path']);
                 }).catch((e) => {
-                console.log(e);
+                //console.log(e);
             });
         }
 

@@ -33,15 +33,15 @@ function FilmSearch() {
         const option = { signal: abortController.signal };
         const fetchFilms = () => {
             if(filmName !== '') {
-                console.log(filmName)
+                //console.log(filmName)
                 fetch(`https://api.themoviedb.org/3/search/movie?api_key=bde98089c7cef8c708ca1f4350ecba1a&query=${filmName}&page=1`)
                     .then((response) => response.json())
                     .then((data) => {
-                        console.log(data['results'][0])
+                        //console.log(data['results'][0])
                         const finalFilmArray = buildFilmArray(data['results']);
                         setFilms(finalFilmArray);
                     }).catch((e) => {
-                    console.log(e);
+                    //console.log(e);
                 });
             }else {
                 setFilms([]);

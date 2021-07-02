@@ -9,7 +9,6 @@ import StopWordReverse from "./components/stopWord/StopWordReverse.component";
 
 function App() {
     const [text, setText]= useState(null);
-    console.log(text)
     return (
         <div className="App">
             <Route path="/">
