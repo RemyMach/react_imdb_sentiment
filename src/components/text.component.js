@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import './Home.css';
-import {useTextContext} from "../context/TextContext";
+import {TextContextProvider} from "../context/TextContext";
+import TextChild from "./textChild.component";
 
-function Home() {
-    const {text} = useTextContext();
+function Text() {
     return (
         <div id="home-content">
-            {{text}}
+            <TextContextProvider value={{text: "je suis la data"}}>
+                <TextChild />
+            </TextContextProvider>
         </div>
     );
 
 }
 
-export default Home
+export default Text;

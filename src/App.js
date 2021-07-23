@@ -6,6 +6,7 @@ import StopWord from "./components/stopWord/StopWord.component";
 import FilmDetails from "./components/film/FilmDetails.component";
 import Route from "./components/route/Route.component";
 import StopWordReverse from "./components/stopWord/StopWordReverse.component";
+import Text from "./components/text.component";
 
 function App() {
     const [text, setText]= useState(null);
@@ -24,7 +25,7 @@ function App() {
                 <StopWordReverse text={text}/>
             </Route>
             <Route path="/text">
-                <StopWordReverse text={text}/>
+                <Text />
             </Route>
         </div>
     );

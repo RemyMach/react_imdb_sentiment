@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Home.css';
 import LinkButton from "./route/LinkButton.component";
+import TextContext from "../context/TextContext";
 
 function Home() {
 
@@ -28,6 +29,9 @@ function Home() {
                     </div>
                 </span>
             </div>
+            <TextContext.Provider value={"je suis une pomme"}>
+
+            </TextContext.Provider>
 
         </div>
     );
