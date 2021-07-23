@@ -23,6 +23,9 @@ function App() {
             <Route path="/reverse">
                 <StopWordReverse text={text}/>
             </Route>
+            <Route path="/text">
+                <StopWordReverse text={text}/>
+            </Route>
         </div>
     );
 }
